@@ -5,6 +5,7 @@
 USE [master]
 GO
 /****** Object:  Database [AsociacionIndustrialDAASIND]    Script Date: 3/5/2021 7:16:16 p. m. ******/
+drop database AsociacionIndustrialDAASIND
 CREATE DATABASE [AsociacionIndustrialDAASIND]
  
 USE [AsociacionIndustrialDAASIND]
