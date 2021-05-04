@@ -14,6 +14,8 @@ SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
+if OBJECT_ID('tempdb ..Almacen') is not null
+drop table Almacen
 CREATE TABLE [dbo].[Almacen](
 	[IdProducto] [nchar](25) NOT NULL,
 	[Coste] [money] NULL,
@@ -30,6 +32,8 @@ SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
+if OBJECT_ID('tempdb ..DetalleOrdenPedido') is not null
+drop table DetalleOrdenPedido
 CREATE TABLE [dbo].[DetalleOrdenPedido](
 	[CodigoPro] [numeric](18, 0) NOT NULL,
 	[IdResultadoPro] [nchar](30) NULL,
@@ -47,6 +51,8 @@ SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
+if OBJECT_ID('tempdb ..EnsamblePro') is not null
+drop table EnsamblePro
 CREATE TABLE [dbo].[EnsamblePro](
 	[IdResultadoPro] [nchar](30) NOT NULL,
 	[Maquina] [nchar](20) NULL,
@@ -63,6 +69,8 @@ SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
+if OBJECT_ID('tempdb ..ProcesoOperativo') is not null
+drop table ProcesoOperativo
 CREATE TABLE [dbo].[ProcesoOperativo](
 	[CodigoPro] [numeric](18, 0) NOT NULL,
 	[IdResultadoPro] [nchar](30) NULL,
@@ -80,6 +88,8 @@ SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
+if OBJECT_ID('tempdb ..ProcesoVenta') is not null
+drop table ProcesoVenta
 CREATE TABLE [dbo].[ProcesoVenta](
 	[IdProveedor] [nvarchar](50) NOT NULL,
 	[FormaPago] [nchar](30) NULL,
@@ -98,6 +108,8 @@ SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
+if OBJECT_ID('tempdb ..TablaEmpleado') is not null
+drop table TablaEmpleado
 CREATE TABLE [dbo].[TablaEmpleado](
 	[IdNombreEmpleado] [nvarchar](50) NOT NULL,
 	[Direccion] [text] NULL,
